@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4220557124BC163100682302 /* TurnresultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4220557024BC163100682302 /* TurnresultViewController.swift */; };
+		4220557324BC164800682302 /* ShiritoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4220557224BC164800682302 /* ShiritoriViewController.swift */; };
+		4220557524BC165700682302 /* YosokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4220557424BC165700682302 /* YosokuViewController.swift */; };
+		4220557724BC1AAB00682302 /* Turn1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4220557624BC1AAB00682302 /* Turn1ViewController.swift */; };
+		4220557F24BC1E6300682302 /* Turn1shiritoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4220557E24BC1E6300682302 /* Turn1shiritoriViewController.swift */; };
+		4220558124BC202B00682302 /* ShowresultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4220558024BC202B00682302 /* ShowresultViewController.swift */; };
+		4220558524BC23C100682302 /* Turn2shiritoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4220558424BC23C100682302 /* Turn2shiritoriViewController.swift */; };
+		4220558B24BF05C900682302 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4220558A24BF05C900682302 /* ResultViewController.swift */; };
+		42C3144724AC5D2B0067F630 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3144624AC5D2B0067F630 /* AppDelegate.swift */; };
+		42C3144924AC5D2B0067F630 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3144824AC5D2B0067F630 /* SceneDelegate.swift */; };
+		42C3144B24AC5D2B0067F630 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3144A24AC5D2B0067F630 /* ViewController.swift */; };
+		42C3144E24AC5D2B0067F630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C3144C24AC5D2B0067F630 /* Main.storyboard */; };
+		42C3145024AC5D380067F630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C3144F24AC5D380067F630 /* Assets.xcassets */; };
+		42C3145324AC5D380067F630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C3145124AC5D380067F630 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4220557024BC163100682302 /* TurnresultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnresultViewController.swift; sourceTree = "<group>"; };
+		4220557224BC164800682302 /* ShiritoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiritoriViewController.swift; sourceTree = "<group>"; };
+		4220557424BC165700682302 /* YosokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YosokuViewController.swift; sourceTree = "<group>"; };
+		4220557624BC1AAB00682302 /* Turn1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn1ViewController.swift; sourceTree = "<group>"; };
+		4220557E24BC1E6300682302 /* Turn1shiritoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn1shiritoriViewController.swift; sourceTree = "<group>"; };
+		4220558024BC202B00682302 /* ShowresultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowresultViewController.swift; sourceTree = "<group>"; };
+		4220558424BC23C100682302 /* Turn2shiritoriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn2shiritoriViewController.swift; sourceTree = "<group>"; };
+		4220558A24BF05C900682302 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		42C3144324AC5D2B0067F630 /* Shiritori3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiritori3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C3144624AC5D2B0067F630 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42C3144824AC5D2B0067F630 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		42C3144A24AC5D2B0067F630 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42C3144D24AC5D2B0067F630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42C3144F24AC5D380067F630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42C3145224AC5D380067F630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42C3145424AC5D380067F630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42C3144024AC5D2A0067F630 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42C3143A24AC5D2A0067F630 = {
+			isa = PBXGroup;
+			children = (
+				42C3144524AC5D2B0067F630 /* Shiritori3 */,
+				42C3144424AC5D2B0067F630 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42C3144424AC5D2B0067F630 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42C3144324AC5D2B0067F630 /* Shiritori3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42C3144524AC5D2B0067F630 /* Shiritori3 */ = {
+			isa = PBXGroup;
+			children = (
+				42C3144624AC5D2B0067F630 /* AppDelegate.swift */,
+				42C3144824AC5D2B0067F630 /* SceneDelegate.swift */,
+				42C3144A24AC5D2B0067F630 /* ViewController.swift */,
+				4220557224BC164800682302 /* ShiritoriViewController.swift */,
+				4220557424BC165700682302 /* YosokuViewController.swift */,
+				4220557024BC163100682302 /* TurnresultViewController.swift */,
+				42C3144C24AC5D2B0067F630 /* Main.storyboard */,
+				42C3144F24AC5D380067F630 /* Assets.xcassets */,
+				42C3145124AC5D380067F630 /* LaunchScreen.storyboard */,
+				42C3145424AC5D380067F630 /* Info.plist */,
+				4220557624BC1AAB00682302 /* Turn1ViewController.swift */,
+				4220557E24BC1E6300682302 /* Turn1shiritoriViewController.swift */,
+				4220558424BC23C100682302 /* Turn2shiritoriViewController.swift */,
+				4220558024BC202B00682302 /* ShowresultViewController.swift */,
+				4220558A24BF05C900682302 /* ResultViewController.swift */,
+			);
+			path = Shiritori3;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42C3144224AC5D2A0067F630 /* Shiritori3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42C3145724AC5D380067F630 /* Build configuration list for PBXNativeTarget "Shiritori3" */;
+			buildPhases = (
+				42C3143F24AC5D2A0067F630 /* Sources */,
+				42C3144024AC5D2A0067F630 /* Frameworks */,
+				42C3144124AC5D2A0067F630 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shiritori3;
+			productName = Shiritori3;
+			productReference = 42C3144324AC5D2B0067F630 /* Shiritori3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42C3143B24AC5D2A0067F630 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = litech;
+				TargetAttributes = {
+					42C3144224AC5D2A0067F630 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 42C3143E24AC5D2A0067F630 /* Build configuration list for PBXProject "Shiritori3" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42C3143A24AC5D2A0067F630;
+			productRefGroup = 42C3144424AC5D2B0067F630 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42C3144224AC5D2A0067F630 /* Shiritori3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42C3144124AC5D2A0067F630 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42C3145324AC5D380067F630 /* LaunchScreen.storyboard in Resources */,
+				42C3145024AC5D380067F630 /* Assets.xcassets in Resources */,
+				42C3144E24AC5D2B0067F630 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42C3143F24AC5D2A0067F630 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4220557124BC163100682302 /* TurnresultViewController.swift in Sources */,
+				4220558B24BF05C900682302 /* ResultViewController.swift in Sources */,
+				42C3144B24AC5D2B0067F630 /* ViewController.swift in Sources */,
+				42C3144724AC5D2B0067F630 /* AppDelegate.swift in Sources */,
+				4220558124BC202B00682302 /* ShowresultViewController.swift in Sources */,
+				4220557324BC164800682302 /* ShiritoriViewController.swift in Sources */,
+				4220557524BC165700682302 /* YosokuViewController.swift in Sources */,
+				4220558524BC23C100682302 /* Turn2shiritoriViewController.swift in Sources */,
+				4220557724BC1AAB00682302 /* Turn1ViewController.swift in Sources */,
+				4220557F24BC1E6300682302 /* Turn1shiritoriViewController.swift in Sources */,
+				42C3144924AC5D2B0067F630 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42C3144C24AC5D2B0067F630 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42C3144D24AC5D2B0067F630 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42C3145124AC5D380067F630 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42C3145224AC5D380067F630 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42C3145524AC5D380067F630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		42C3145624AC5D380067F630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42C3145824AC5D380067F630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Shiritori3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.Shiritori3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42C3145924AC5D380067F630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Shiritori3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.litech.Shiritori3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42C3143E24AC5D2A0067F630 /* Build configuration list for PBXProject "Shiritori3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C3145524AC5D380067F630 /* Debug */,
+				42C3145624AC5D380067F630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42C3145724AC5D380067F630 /* Build configuration list for PBXNativeTarget "Shiritori3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42C3145824AC5D380067F630 /* Debug */,
+				42C3145924AC5D380067F630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42C3143B24AC5D2A0067F630 /* Project object */;
+}
