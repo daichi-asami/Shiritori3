@@ -7,28 +7,34 @@
 //
 
 import UIKit
+import Foundation
 
 extension String {
-    /// 「カタカナ」に変換
     var toKatakana: String? {
         return self.applyingTransform(.hiraganaToKatakana, reverse: false)
     }
     var toHiragana: String? {
         return self.applyingTransform(.hiraganaToKatakana, reverse: true)
     }
+    var isKatakana: Bool {
+        let range = "^[ァ-ヾ]+$"
+        return NSPredicate(format: "SELF MATCHES %@", range).evaluate(with: self)
+    }
 }
 
 class ShiritoriViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var firstlabel: UILabel!
-    @IBOutlet var label1p: UILabel!
-    @IBOutlet var label2p: UILabel!
+    @IBOutlet var turnlabel: UILabel!
     @IBOutlet var nyuuryokufield: UITextField!
+    @IBOutlet weak var nextbutton: UIButton!
     
     var turnnumber: Int!
     var nyuuryokuword = ""
     var shiritorienterword = ""
     var lastword = ""
+    var correctnumber: Int!
     var  alertContoroller: UIAlertController!
+    private var nyuuryokuText: String?
     
     
     override func viewDidLoad() {
@@ -41,13 +47,33 @@ class ShiritoriViewController: UIViewController, UITextFieldDelegate {
         }
         // Do any additional setup after loading the view.
         if turnnumber % 2 == 1{
-            label2p.isHidden = true
+            turnlabel.text = String("1Pのしりとりターン")
+            turnlabel.textColor = UIColor(red: 252/255, green: 81/255, blue: 133/255, alpha: 1.0)
         }else{
-            label1p.isHidden = true
+            turnlabel.text = String("2Pのしりとりターン")
+            turnlabel.textColor = UIColor(red: 54/255, green: 79/255, blue: 107/255, alpha: 1.0)
         }
     }
     
+    @IBAction func nyuuryokuEditChanged(_ sender: UITextField){
+        self.nyuuryokuText = sender.text
+        self.validate()
+    }
     
+    private func validate() {
+          guard let nyuuryokuTxt = self.nyuuryokuText else {
+            self.nextbutton.isEnabled = false
+            self.nextbutton.setTitleColor(UIColor(red: 164/255, green: 164/255, blue: 164/255, alpha: 1.0), for: .normal)
+            return
+          }
+          if nyuuryokuTxt.count == 0{
+            self.nextbutton.isEnabled = false
+            self.nextbutton.setTitleColor(UIColor(red: 164/255, green: 164/255, blue: 164/255, alpha: 1.0), for: .normal)
+            return
+        }
+          self.nextbutton.isEnabled = true
+          self.nextbutton.setTitleColor(UIColor.black, for: .normal)
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -74,8 +100,10 @@ class ShiritoriViewController: UIViewController, UITextFieldDelegate {
     @IBAction func shiritori(){
         nyuuryokuword = nyuuryokufield.text!.toKatakana!
         self.view.endEditing(true)
-        
-        if String(firstlabel.text!.toKatakana!) != String(nyuuryokuword.prefix(1)){
+
+        if String(nyuuryokuword.toKatakana!).isKatakana == false{
+            alert(title: "警告", message: "ひらがなで入力してね！")
+        }else if String(firstlabel.text!.toKatakana!) != String(nyuuryokuword.prefix(1)){
             alert(title: "警告", message: " 最初の文字が違うよ！")
         }else if String(nyuuryokuword.suffix(1)) == "ン"{
             alert(title: "警告", message: "最後が『ん』だよ！")
@@ -118,7 +146,7 @@ class ShiritoriViewController: UIViewController, UITextFieldDelegate {
             turn1ViewContoroller.turnnumber = turnnumber
             turn1ViewContoroller.shiritorienterword = shiritorienterword
             turn1ViewContoroller.lastword = lastword
+            turn1ViewContoroller.correctnumber = correctnumber
         }
     }
-    
 }

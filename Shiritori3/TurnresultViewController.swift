@@ -13,23 +13,27 @@ class TurnresultViewController: UIViewController {
     @IBOutlet var yosokulabel: UILabel!
     @IBOutlet var resultlabel: UILabel!
     @IBOutlet var turnlabel: UILabel!
+    @IBOutlet var nexxtbutton: UIButton!
     var turnnumber: Int!
     var shiritorienterword = ""
     var yosokuenterword = ""
-    var correctnumber: Int! = 0
+    var correctnumber: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         shiritorilabel.text = UserDefaults.standard.object(forKey: "shiritoriKey") as? String
         yosokulabel.text = yosokuenterword
         turnlabel.text = String(turnnumber - 1)
+        
         if yosokuenterword.prefix(1) == shiritorienterword.suffix(1){
             resultlabel.text = "一致"
             correctnumber += 1
         }else{
             resultlabel.text = "不一致"
         }
-        // Do any additional setup after loading the view.
+        if turnnumber == 11{
+            nexxtbutton.setTitle("最終結果", for: .normal)
+        }
     }
     
     
@@ -38,14 +42,12 @@ class TurnresultViewController: UIViewController {
             let turn2shiritoriViewContoroller = segue.destination as! Turn2shiritoriViewController
             turn2shiritoriViewContoroller.turnnumber = turnnumber
             turn2shiritoriViewContoroller.shiritorienterword = shiritorienterword
+            turn2shiritoriViewContoroller.correctnumber = correctnumber
         }else if segue.identifier == "turn10"{
             let resultViewcontroller = segue.destination as! ResultViewController
             resultViewcontroller.correctnumber = correctnumber
         }
     }
-    
-    
-    
     
     @IBAction func next(){
         if turnnumber == 11{

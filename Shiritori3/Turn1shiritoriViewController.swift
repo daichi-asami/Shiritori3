@@ -11,30 +11,23 @@ import UIKit
 class Turn1shiritoriViewController: UIViewController {
     var turnnumber: Int = 1
     var enterword = ""
-
+    var correctnumber: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "toSecond" {
-        let shiritoriViewContoroller = segue.destination as! ShiritoriViewController
-        shiritoriViewContoroller.turnnumber = turnnumber
+        if segue.identifier == "toSecond" {
+            let shiritoriViewContoroller = segue.destination as! ShiritoriViewController
+            shiritoriViewContoroller.turnnumber = turnnumber
+            shiritoriViewContoroller.correctnumber = correctnumber
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MgK-dz-4La">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,228 +11,230 @@
         <!--View Controller-->
         <scene sceneID="VqE-Bj-a1u">
             <objects>
-                <viewController id="MgK-dz-4La" sceneMemberID="viewController">
+                <viewController id="MgK-dz-4La" customClass="ViewController" customModule="Shiritori3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a4m-3N-xZc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-7P-SX5">
-                                <rect key="frame" x="114" y="625" width="148" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconnnn.001.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cpx-zp-D4m">
+                                <rect key="frame" x="0.0" y="-144" width="414" height="1024"/>
+                                <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mn-7P-SX5">
+                                <rect key="frame" x="133" y="709" width="148" height="44"/>
+                                <color key="backgroundColor" name="LabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Jco-Sz-Wr1"/>
+                                    <constraint firstAttribute="width" constant="148" id="lbb-GZ-Mxu"/>
+                                </constraints>
                                 <state key="normal" title="Play">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="Hvu-SX-WCx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="予測  しりとり" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhB-m7-EeV">
+                                <rect key="frame" x="0.0" y="297.66666666666669" width="414" height="111"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="37"/>
+                                <color key="textColor" name="TopColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="p4L-7p-Fop" firstAttribute="bottom" secondItem="0Mn-7P-SX5" secondAttribute="bottom" constant="109" id="B2z-1P-e4W"/>
+                            <constraint firstItem="lhB-m7-EeV" firstAttribute="centerY" secondItem="a4m-3N-xZc" secondAttribute="centerY" constant="-95" id="NKu-6a-FLT"/>
+                            <constraint firstItem="0Mn-7P-SX5" firstAttribute="centerX" secondItem="a4m-3N-xZc" secondAttribute="centerX" id="SU1-M1-aol"/>
+                            <constraint firstItem="lhB-m7-EeV" firstAttribute="leading" secondItem="p4L-7p-Fop" secondAttribute="leading" id="ebA-Ut-zhl"/>
+                            <constraint firstItem="Cpx-zp-D4m" firstAttribute="centerX" secondItem="a4m-3N-xZc" secondAttribute="centerX" id="hdd-C3-vZ7"/>
+                            <constraint firstAttribute="trailing" secondItem="Cpx-zp-D4m" secondAttribute="trailing" id="jbG-AC-hed"/>
+                            <constraint firstItem="Cpx-zp-D4m" firstAttribute="centerY" secondItem="a4m-3N-xZc" secondAttribute="centerY" constant="-80" id="oGv-66-V2V"/>
+                            <constraint firstItem="lhB-m7-EeV" firstAttribute="trailing" secondItem="p4L-7p-Fop" secondAttribute="trailing" id="uxP-om-9SG"/>
+                            <constraint firstItem="lhB-m7-EeV" firstAttribute="centerX" secondItem="a4m-3N-xZc" secondAttribute="centerX" id="w06-Mb-acT"/>
+                            <constraint firstItem="Cpx-zp-D4m" firstAttribute="leading" secondItem="a4m-3N-xZc" secondAttribute="leading" id="xxl-pO-nxr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="p4L-7p-Fop"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG8-1V-6E8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1106" y="44"/>
+            <point key="canvasLocation" x="-1107.2463768115942" y="43.526785714285715"/>
         </scene>
         <!--Turn 1shiritori View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="Turn1shiritoriViewController" customModule="Shiritori3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNG-qF-zeR">
-                                <rect key="frame" x="16" y="256" width="343" height="190"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text" base64-UTF8="YES">
-5LuK44K544Oe44Ob44KS5oyB44Gj44Gm44GE44KLDQ0K44GC44Gq44Gf44GMMVDjgafjgoLjgYbkuIDk
-urrjgYwyUOOBp+OBmQ0NCjFQ44Gu5Lq644Gv6KGo56S644GV44KM44KL5Y2Y6Kqe44GnDREREREK44GX
-44KK44Go44KK44KS44GX44Gf44KJERERERERERHigKgN44GX44KK44Go44KK44Oc44K/44Oz44KS5oq8
-44GX44Gm44GP44Gg44GV44GEA
-</string>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
-                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b1-zb-zpD">
-                                <rect key="frame" x="114" y="625" width="148" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b1-zb-zpD">
+                                <rect key="frame" x="133" y="709" width="148" height="44"/>
+                                <color key="backgroundColor" name="LabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JUV-80-SCe"/>
+                                    <constraint firstAttribute="width" constant="148" id="Ofo-Y9-ezq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                 <state key="normal" title="次へ">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="jdm-sS-Wpq" kind="presentation" identifier="toSecond" modalPresentationStyle="fullScreen" id="QWQ-Jl-xcX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNG-qF-zeR">
+                                <rect key="frame" x="50.333333333333343" y="241" width="313.33333333333326" height="294"/>
+                                <string key="text" base64-UTF8="YES">
+5LuK44K544Oe44Ob44KS5oyB44Gj44Gm44GE44KLDQ0K44GC44Gq44Gf44GMMVDjgafjgoLjgYbkuIDk
+urrjgYwyUOOBp+OBmQ3igKgNCjFQ44Gu5Lq644Gv4oCo4oCoMlDjga7kurrjgavopovjgonjgozjgarj
+gYTjgojjgYbjgavigKjigKjooajnpLrjgZXjgozjgovljZjoqp7jgYvjgokNEREREQrjgZfjgorjgajj
+gorjgpLjgZfjgZ/jgokREREREREREeKAqA3jgZfjgorjgajjgorjg5zjgr/jg7PjgpLmirzjgZfjgabj
+gY/jgaDjgZXjgYQ
+</string>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
+                                <color key="textColor" name="fontcolor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LNG-qF-zeR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4t0-5b-Qro"/>
+                            <constraint firstItem="8b1-zb-zpD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j9f-44-8hA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8b1-zb-zpD" secondAttribute="bottom" constant="109" id="m91-ga-bB7"/>
+                            <constraint firstItem="LNG-qF-zeR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="qzk-eQ-N4X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-158" y="44"/>
+            <point key="canvasLocation" x="-159.19999999999999" y="43.596059113300491"/>
         </scene>
         <!--Turn 2shiritori View Controller-->
         <scene sceneID="RSs-KJ-sRX">
             <objects>
                 <viewController id="wz3-Lx-QBt" customClass="Turn2shiritoriViewController" customModule="Shiritori3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qGd-tu-Itl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78p-G1-ddY">
-                                <rect key="frame" x="16" y="256" width="343" height="190"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text" base64-UTF8="YES">
-MlDjgagxUOOBrumghueVquOCkuWFpeOCjOabv+OBiOOBvuOBmQ0NDTJQ44Gu5Lq644Gv6KGo56S644GV
-44KM44KL5Y2Y6Kqe44GnDRERERERERERERER4oCo44GX44KK44Go44KK44KS44GX44Gf44KJDQ3lrozk
-uobjg5zjgr/jg7PjgpLmirzjgZfjgabjgY/jgaDjgZXjgYQ
-</string>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
-                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndt-CJ-f6e">
-                                <rect key="frame" x="114" y="625" width="148" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndt-CJ-f6e">
+                                <rect key="frame" x="133" y="709" width="148" height="44"/>
+                                <color key="backgroundColor" name="LabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="P8K-aj-92b"/>
+                                    <constraint firstAttribute="width" constant="148" id="e2k-Wo-LOp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                 <state key="normal" title="次へ">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="jdm-sS-Wpq" kind="presentation" identifier="toSecond" modalPresentationStyle="fullScreen" id="gUQ-r7-bFq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DU-N5-fPn">
-                                <rect key="frame" x="80" y="310" width="215" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">1Pがしりとりをする
- ターンです</string>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-8Q-3r8">
-                                <rect key="frame" x="80" y="310" width="215" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">2Pがしりとりをする
- ターンです</string>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78p-G1-ddY">
+                                <rect key="frame" x="35.666666666666657" y="254.66666666666663" width="343" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Fe6-hh-IGA"/>
+                                    <constraint firstAttribute="height" constant="267" id="g9J-Mr-K9Z"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+MlDjgagxUOOBrumghueVquOCkuWFpeOCjOabv+OBiOOBvuOBmQ0NDTJQ44Gu5Lq644Gv4oCo4oCoMVDj
+ga7kurrjgavopovjgonjgozjgarjgYTjgojjgYbjgavigKjigKjooajnpLrjgZXjgozjgovljZjoqp7j
+gYvjgokNERERERERERERERHigKjjgZfjgorjgajjgorjgpLjgZfjgZ/jgokNDeWujOS6huODnOOCv+OD
+s+OCkuaKvOOBl+OBpuOBj+OBoOOBleOBhA
+</string>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ndt-CJ-f6e" firstAttribute="centerX" secondItem="qGd-tu-Itl" secondAttribute="centerX" id="0gl-uE-YAi"/>
+                            <constraint firstItem="oen-2l-TYA" firstAttribute="bottom" secondItem="Ndt-CJ-f6e" secondAttribute="bottom" constant="109" id="bKJ-9q-QmH"/>
+                            <constraint firstItem="78p-G1-ddY" firstAttribute="centerX" secondItem="qGd-tu-Itl" secondAttribute="centerX" id="h8Y-9c-Bg3"/>
+                            <constraint firstItem="78p-G1-ddY" firstAttribute="centerY" secondItem="qGd-tu-Itl" secondAttribute="centerY" constant="-60" id="nv0-xI-nIA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oen-2l-TYA"/>
                     </view>
                     <connections>
                         <outlet property="label1" destination="78p-G1-ddY" id="WUH-In-qmt"/>
-                        <outlet property="label2" destination="8DU-N5-fPn" id="37Y-p0-A64"/>
-                        <outlet property="label3" destination="hxk-8Q-3r8" id="Cb2-ik-z6y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9A-Gx-bm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854" y="1011"/>
+            <point key="canvasLocation" x="2863" y="774"/>
         </scene>
         <!--Turn1 View Controller-->
         <scene sceneID="HCl-0R-ANE">
             <objects>
                 <viewController id="712-1D-N8G" customClass="Turn1ViewController" customModule="Shiritori3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="acb-h1-KnV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-Pw-ZVj">
-                                <rect key="frame" x="52.666666666666664" y="201" width="272" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-Pw-ZVj">
+                                <rect key="frame" x="84.666666666666671" y="261.66666666666669" width="244.66666666666663" height="273.00000000000006"/>
                                 <string key="text" base64-UTF8="YES">
 44K544Oe44Ob44KSMlDjga7kurrjgasNDQrmuKHjgZfjgabjgY/jgaDjgZXjgYQNEeKAqA0KMlDjga7k
 urrjga8xUOOBruS6uuOBjOaJk+OBo+OBnw0NCuWNmOiqnuOCkuS6iOa4rOOBl+OBpg0NCuOBneOBruWN
 mOiqnuOBq+e2muOBhOOBpg0NCuOBl+OCiuOBqOOCiuOBl+OBpuOBj+OBoOOBleOBhAo
 </string>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
-                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOm-h0-M3g">
-                                <rect key="frame" x="114" y="625" width="148" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOm-h0-M3g">
+                                <rect key="frame" x="133" y="709" width="148" height="44"/>
+                                <color key="backgroundColor" name="LabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="74Z-Ok-V8M"/>
+                                    <constraint firstAttribute="height" constant="44" id="rhl-Df-09o"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                 <state key="normal" title="次へ">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="yst-B3-dck" kind="presentation" identifier="toSecond" modalPresentationStyle="fullScreen" id="mis-Fz-YPx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJ4-uf-IMg">
-                                <rect key="frame" x="52" y="201" width="272" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text" base64-UTF8="YES">
-44K544Oe44Ob44KSMVDjga7kurrjgasNDQrmuKHjgZfjgabjgY/jgaDjgZXjgYQNEeKAqA0KMVDjga7k
-urrjga8yUOOBruS6uuOBjOaJk+OBo+OBnw0NCuWNmOiqnuOCkuS6iOa4rOOBl+OBpg0NCuOBneOBruWN
-mOiqnuOBq+e2muOBhOOBpg0NCuOBl+OCiuOBqOOCiuOBl+OBpuOBj+OBoOOBleOBhAo
-</string>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
-                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZn-Cf-cRO">
-                                <rect key="frame" x="80" y="302" width="215" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">1Pが予測をする
- ターンです</string>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmF-FT-buh">
-                                <rect key="frame" x="80" y="302" width="215" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">2Pが予測をする
- ターンです</string>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CDU-oE-VzD" firstAttribute="bottom" secondItem="MOm-h0-M3g" secondAttribute="bottom" constant="109" id="1N0-M1-7Yp"/>
+                            <constraint firstItem="0Nh-Pw-ZVj" firstAttribute="centerX" secondItem="acb-h1-KnV" secondAttribute="centerX" id="96C-jy-ADM"/>
+                            <constraint firstItem="0Nh-Pw-ZVj" firstAttribute="centerY" secondItem="acb-h1-KnV" secondAttribute="centerY" constant="-50" id="Qcw-vX-fgz"/>
+                            <constraint firstItem="MOm-h0-M3g" firstAttribute="centerX" secondItem="acb-h1-KnV" secondAttribute="centerX" id="kO1-Cs-Ifi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CDU-oE-VzD"/>
                     </view>
                     <connections>
                         <outlet property="label1" destination="0Nh-Pw-ZVj" id="tXQ-ZX-zHt"/>
-                        <outlet property="label2" destination="yJ4-uf-IMg" id="TK6-cH-ZuW"/>
-                        <outlet property="label3" destination="bmF-FT-buh" id="lao-aW-sKn"/>
-                        <outlet property="label4" destination="mZn-Cf-cRO" id="dko-Wm-Jrg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXa-zx-7qp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -243,110 +246,130 @@ mOiqnuOBq+e2muOBhOOBpg0NCuOBl+OCiuOBqOOCiuOBl+OBpuOBj+OBoOOBleOBhAo
             <objects>
                 <viewController id="yst-B3-dck" customClass="YosokuViewController" customModule="Shiritori3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ghT-dr-emr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2Pのターン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhM-5h-g2V">
-                                <rect key="frame" x="14" y="66" width="197" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="29"/>
-                                <color key="textColor" red="0.21176470588235294" green="0.30980392156862746" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="り" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYD-SM-Age">
-                                <rect key="frame" x="164" y="153" width="47" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="181" y="169" width="52" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="45"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="から" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNm-ig-sFz">
-                                <rect key="frame" x="239" y="202" width="32" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="264" y="219" width="56" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQd-Fy-0Rg">
-                                <rect key="frame" x="82" y="335" width="212" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GQd-Fy-0Rg">
+                                <rect key="frame" x="101" y="381" width="212" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Zk4-Os-fKr"/>
+                                    <constraint firstAttribute="width" constant="212" id="a41-12-YIe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nyuuryokuEditChanged:" destination="yst-B3-dck" eventType="editingDidEnd" id="ydm-4x-4iz"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x18-Xw-WXN">
-                                <rect key="frame" x="114" y="625" width="148" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x18-Xw-WXN">
+                                <rect key="frame" x="133" y="709" width="148" height="44"/>
+                                <color key="backgroundColor" name="LabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Kju-Dz-vdS"/>
+                                    <constraint firstAttribute="width" constant="148" id="T7K-KB-JL3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                 <state key="normal" title="予測">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="yosoku" destination="yst-B3-dck" eventType="touchUpInside" id="NEe-SS-PYm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1Pのターン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clw-oO-O6e">
-                                <rect key="frame" x="14" y="66" width="197" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1Pの予測ターン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Clw-oO-O6e">
+                                <rect key="frame" x="98" y="73" width="218" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="29"/>
                                 <color key="textColor" red="0.98823529409999999" green="0.31764705879999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GQd-Fy-0Rg" firstAttribute="centerY" secondItem="ghT-dr-emr" secondAttribute="centerY" constant="-50" id="S4Y-qk-sNt"/>
+                            <constraint firstItem="GQd-Fy-0Rg" firstAttribute="centerX" secondItem="ghT-dr-emr" secondAttribute="centerX" id="Xf7-E4-wPJ"/>
+                            <constraint firstItem="x18-Xw-WXN" firstAttribute="centerX" secondItem="ghT-dr-emr" secondAttribute="centerX" id="nj2-di-U37"/>
+                            <constraint firstItem="LtD-e6-tUb" firstAttribute="bottom" secondItem="x18-Xw-WXN" secondAttribute="bottom" constant="109" id="zb8-7h-E1a"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LtD-e6-tUb"/>
                     </view>
                     <connections>
                         <outlet property="firstlabel" destination="UYD-SM-Age" id="4fT-hw-juq"/>
-                        <outlet property="label1p" destination="Clw-oO-O6e" id="EKa-cc-J71"/>
-                        <outlet property="label2p" destination="FhM-5h-g2V" id="jqG-Pp-AoV"/>
+                        <outlet property="nextbutton" destination="x18-Xw-WXN" id="BTr-WC-YKi"/>
                         <outlet property="nyuuryokufield" destination="GQd-Fy-0Rg" id="FUC-1p-r4c"/>
+                        <outlet property="turnlabel" destination="Clw-oO-O6e" id="YGg-Hc-yWe"/>
                         <segue destination="j2d-qw-Vet" kind="presentation" identifier="toSecond" modalPresentationStyle="fullScreen" id="nSm-az-xxr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWd-zQ-TG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3270" y="44"/>
+            <point key="canvasLocation" x="3269.5652173913045" y="43.526785714285715"/>
         </scene>
         <!--Showresult View Controller-->
         <scene sceneID="1J9-O0-QNr">
             <objects>
                 <viewController id="j2d-qw-Vet" customClass="ShowresultViewController" customModule="Shiritori3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HRc-Bd-Arv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7R-4F-ZEn">
-                                <rect key="frame" x="114" y="625" width="148" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7R-4F-ZEn">
+                                <rect key="frame" x="133" y="709" width="148" height="44"/>
+                                <color key="backgroundColor" name="LabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="B1U-3X-ZlV"/>
+                                    <constraint firstAttribute="width" constant="148" id="cN0-do-gjZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <state key="normal" title="表示">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="vSU-Pr-F79" kind="presentation" identifier="toSecond" modalPresentationStyle="fullScreen" id="Sbe-Fu-Le9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="結果を表示します" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6N-mp-XFI">
-                                <rect key="frame" x="94" y="325" width="188" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果を表示します" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6N-mp-XFI">
+                                <rect key="frame" x="113" y="396" width="188" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="d1O-xB-Vcy"/>
+                                    <constraint firstAttribute="width" constant="188" id="hQ0-xJ-xRU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G7R-4F-ZEn" firstAttribute="centerX" secondItem="HRc-Bd-Arv" secondAttribute="centerX" id="1qQ-ht-ihE"/>
+                            <constraint firstItem="y9d-9S-fy8" firstAttribute="bottom" secondItem="G7R-4F-ZEn" secondAttribute="bottom" constant="109" id="Gda-iL-bVN"/>
+                            <constraint firstItem="J6N-mp-XFI" firstAttribute="centerX" secondItem="HRc-Bd-Arv" secondAttribute="centerX" id="W0K-UB-nZg"/>
+                            <constraint firstItem="J6N-mp-XFI" firstAttribute="centerY" secondItem="HRc-Bd-Arv" secondAttribute="centerY" constant="-40" id="y8N-OY-z6E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="y9d-9S-fy8"/>
                     </view>
                 </viewController>
@@ -359,80 +382,88 @@ mOiqnuOBq+e2muOBhOOBpg0NCuOBl+OCiuOBqOOCiuOBl+OBpuOBj+OBoOOBleOBhAo
             <objects>
                 <viewController id="vSU-Pr-F79" customClass="TurnresultViewController" customModule="Shiritori3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wHH-rH-MUH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSC-WM-14g">
-                                <rect key="frame" x="79" y="202" width="31" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="87" y="223" width="34" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
                                 <color key="textColor" red="0.98823529409999999" green="0.31764705879999999" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゴリラ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNb-IH-Hkw">
-                                <rect key="frame" x="209" y="347" width="133" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゴリラ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNb-IH-Hkw">
+                                <rect key="frame" x="183" y="383" width="231" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQD-mA-bIY">
-                                <rect key="frame" x="79" y="347" width="31" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="87" y="383" width="34" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
                                 <color key="textColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="正解" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY9-M9-449">
-                                <rect key="frame" x="150" y="499" width="75" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一致" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hY9-M9-449">
+                                <rect key="frame" x="166" y="551" width="82" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQu-sm-Hnb">
-                                <rect key="frame" x="114" y="625" width="148" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQu-sm-Hnb">
+                                <rect key="frame" x="133" y="709" width="148" height="44"/>
+                                <color key="backgroundColor" name="LabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="S6j-1S-86X"/>
+                                    <constraint firstAttribute="width" constant="148" id="lrN-NP-nYg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <state key="normal" title="次のラウンドへ">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="next" destination="vSU-Pr-F79" eventType="touchUpInside" id="JKd-Si-dZZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="リンゴ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUL-QZ-l2H">
-                                <rect key="frame" x="209" y="202" width="133" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="リンゴ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUL-QZ-l2H">
+                                <rect key="frame" x="183" y="223" width="231" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ラウンド" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m80-ht-xWQ">
-                                <rect key="frame" x="127" y="91" width="98" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="140" y="100" width="108" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="１" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DO8-b8-xVf">
-                                <rect key="frame" x="225" y="91" width="29" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="１" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DO8-b8-xVf">
+                                <rect key="frame" x="248" y="100" width="48" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JQu-sm-Hnb" firstAttribute="centerX" secondItem="wHH-rH-MUH" secondAttribute="centerX" id="duP-sf-ICs"/>
+                            <constraint firstItem="yH0-Qg-m3J" firstAttribute="bottom" secondItem="JQu-sm-Hnb" secondAttribute="bottom" constant="109" id="jIi-Yf-1mE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yH0-Qg-m3J"/>
                     </view>
                     <connections>
+                        <outlet property="nexxtbutton" destination="JQu-sm-Hnb" id="k9f-8c-Cf0"/>
                         <outlet property="resultlabel" destination="hY9-M9-449" id="HOC-cB-tN6"/>
                         <outlet property="shiritorilabel" destination="zUL-QZ-l2H" id="qif-Jl-F3Q"/>
                         <outlet property="turnlabel" destination="DO8-b8-xVf" id="qkB-E7-faH"/>
@@ -443,53 +474,72 @@ mOiqnuOBq+e2muOBhOOBpg0NCuOBl+OCiuOBqOOCiuOBl+OBpuOBj+OBoOOBleOBhAo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vff-Sn-sRv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5408.8000000000002" y="43.596059113300491"/>
+            <point key="canvasLocation" x="5408.6956521739139" y="43.526785714285715"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="x5N-tJ-p6h">
             <objects>
                 <viewController id="rt0-zU-3Un" customClass="ResultViewController" customModule="Shiritori3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rv4-fY-igb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7U7-8M-w1A">
-                                <rect key="frame" x="84" y="168" width="207" height="172"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10回中　回一致" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIB-Ff-Oev">
-                                <rect key="frame" x="94" y="440" width="188" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10回中　回一致" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIB-Ff-Oev">
+                                <rect key="frame" x="113" y="566" width="188" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="Qpp-Yx-BZ4"/>
+                                    <constraint firstAttribute="height" constant="24" id="W4p-0W-dAb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq6-I4-lYy">
-                                <rect key="frame" x="114" y="625" width="148" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq6-I4-lYy">
+                                <rect key="frame" x="133" y="709" width="148" height="44"/>
+                                <color key="backgroundColor" name="LabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DfK-eC-Vct"/>
+                                    <constraint firstAttribute="width" constant="148" id="EZM-EN-O08"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <state key="normal" title="Top">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="MgK-dz-4La" kind="presentation" modalPresentationStyle="fullScreen" id="WUG-Yp-OaS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="１" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMD-Mc-0lT">
-                                <rect key="frame" x="179" y="440" width="23" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="１" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMD-Mc-0lT">
+                                <rect key="frame" x="200" y="566" width="24" height="24"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result240ex.png" translatesAutoresizingMaskIntoConstraints="NO" id="7U7-8M-w1A">
+                                <rect key="frame" x="0.0" y="104" width="414" height="417"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="417" id="7LE-Eb-t8r"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7U7-8M-w1A" firstAttribute="top" secondItem="VlO-KL-4QX" secondAttribute="top" constant="60" id="0AE-zk-fOp"/>
+                            <constraint firstItem="vIB-Ff-Oev" firstAttribute="centerX" secondItem="Rv4-fY-igb" secondAttribute="centerX" id="9DH-ep-0Nq"/>
+                            <constraint firstItem="7U7-8M-w1A" firstAttribute="leading" secondItem="VlO-KL-4QX" secondAttribute="leading" id="9vl-4X-qCk"/>
+                            <constraint firstItem="gMD-Mc-0lT" firstAttribute="centerX" secondItem="Rv4-fY-igb" secondAttribute="centerX" constant="5" id="D6k-PA-pEa"/>
+                            <constraint firstItem="7U7-8M-w1A" firstAttribute="trailing" secondItem="VlO-KL-4QX" secondAttribute="trailing" id="Ltj-2M-WBg"/>
+                            <constraint firstItem="gMD-Mc-0lT" firstAttribute="centerY" secondItem="Rv4-fY-igb" secondAttribute="centerY" constant="130" id="NnL-xk-R3t"/>
+                            <constraint firstItem="vIB-Ff-Oev" firstAttribute="centerY" secondItem="Rv4-fY-igb" secondAttribute="centerY" constant="130" id="Umb-cH-6u4"/>
+                            <constraint firstItem="7U7-8M-w1A" firstAttribute="centerX" secondItem="Rv4-fY-igb" secondAttribute="centerX" id="dHf-HX-Jzt"/>
+                            <constraint firstItem="Aq6-I4-lYy" firstAttribute="centerX" secondItem="Rv4-fY-igb" secondAttribute="centerX" id="fV1-PI-kfu"/>
+                            <constraint firstItem="VlO-KL-4QX" firstAttribute="bottom" secondItem="Aq6-I4-lYy" secondAttribute="bottom" constant="109" id="iqK-yd-kjo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VlO-KL-4QX"/>
                     </view>
                     <connections>
@@ -499,85 +549,111 @@ mOiqnuOBq+e2muOBhOOBpg0NCuOBl+OCiuOBqOOCiuOBl+OBpuOBj+OBoOOBleOBhAo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUC-sW-Ut6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6549.6000000000004" y="43.596059113300491"/>
+            <point key="canvasLocation" x="6549.275362318841" y="43.526785714285715"/>
         </scene>
         <!--Shiritori View Controller-->
         <scene sceneID="yP0-gc-ont">
             <objects>
                 <viewController id="jdm-sS-Wpq" customClass="ShiritoriViewController" customModule="Shiritori3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9LC-iu-ntl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1Pのターン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOI-Ug-3u4">
-                                <rect key="frame" x="14" y="66" width="197" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="29"/>
-                                <color key="textColor" red="0.9882352941176471" green="0.31764705882352939" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="から" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edX-6j-QKR">
-                                <rect key="frame" x="239" y="202" width="32" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="264" y="218" width="56" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32p-p6-Bh8">
-                                <rect key="frame" x="82" y="346" width="212" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32p-p6-Bh8">
+                                <rect key="frame" x="101" y="381" width="212" height="34"/>
+                                <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="NJm-qk-sXO"/>
+                                </constraints>
+                                <color key="textColor" name="fontcolor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nyuuryokuEditChanged:" destination="jdm-sS-Wpq" eventType="editingDidEnd" id="Lda-j6-KXa"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="り" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IC-Eu-CeD">
-                                <rect key="frame" x="164" y="154" width="47" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="181" y="170" width="52" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="45"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontcolor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOn-pS-5Gt">
-                                <rect key="frame" x="114" y="625" width="148" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOn-pS-5Gt">
+                                <rect key="frame" x="133" y="709" width="148" height="44"/>
+                                <color key="backgroundColor" name="LabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="Waf-eD-pdl"/>
+                                    <constraint firstAttribute="height" constant="44" id="wpt-yf-xdu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                 <state key="normal" title="しりとり">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.59025416480043791" green="0.59025416480043791" blue="0.59025416480043791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="shiritori" destination="jdm-sS-Wpq" eventType="touchUpInside" id="3AB-PZ-xKg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2Pのターン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-rq-Wsc">
-                                <rect key="frame" x="14" y="66" width="197" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1Pのしりとりターン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOI-Ug-3u4">
+                                <rect key="frame" x="20" y="73" width="374" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="29"/>
-                                <color key="textColor" red="0.21176470589999999" green="0.30980392159999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.9882352941176471" green="0.31764705882352939" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wss-LY-ji5" firstAttribute="bottom" secondItem="qOn-pS-5Gt" secondAttribute="bottom" constant="109" id="5Px-ci-ZFf"/>
+                            <constraint firstItem="32p-p6-Bh8" firstAttribute="centerY" secondItem="9LC-iu-ntl" secondAttribute="centerY" constant="-50" id="9gf-AT-TLq"/>
+                            <constraint firstItem="32p-p6-Bh8" firstAttribute="centerX" secondItem="9LC-iu-ntl" secondAttribute="centerX" id="d9l-Sk-IyN"/>
+                            <constraint firstItem="qOn-pS-5Gt" firstAttribute="centerX" secondItem="9LC-iu-ntl" secondAttribute="centerX" id="l6B-F9-X04"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wss-LY-ji5"/>
                     </view>
                     <connections>
                         <outlet property="firstlabel" destination="5IC-Eu-CeD" id="oHz-nh-2F3"/>
-                        <outlet property="label1p" destination="DOI-Ug-3u4" id="x6m-pc-9Tf"/>
-                        <outlet property="label2p" destination="7JD-rq-Wsc" id="jug-sk-4bA"/>
-                        <outlet property="nyuuryokufield" destination="32p-p6-Bh8" id="cDo-dr-K8g"/>
+                        <outlet property="nextbutton" destination="qOn-pS-5Gt" id="2jy-KH-hkW"/>
+                        <outlet property="nyuuryokufield" destination="32p-p6-Bh8" id="0ZJ-jc-eSR"/>
+                        <outlet property="turnlabel" destination="DOI-Ug-3u4" id="0id-2W-tkJ"/>
                         <segue destination="712-1D-N8G" kind="presentation" identifier="turn1" modalPresentationStyle="fullScreen" id="muS-vM-FVu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BA5-eQ-1HI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016.8" y="43.596059113300491"/>
+            <point key="canvasLocation" x="1015.9420289855074" y="43.526785714285715"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="nSm-az-xxr"/>
         <segue reference="gUQ-r7-bFq"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="iconnnn.001.png" width="1024" height="1024"/>
+        <image name="result240ex.png" width="1024" height="1024"/>
+        <namedColor name="LabelColor">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TopColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="fontcolor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

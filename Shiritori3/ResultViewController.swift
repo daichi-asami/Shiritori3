@@ -10,28 +10,19 @@ import UIKit
 
 class ResultViewController: UIViewController {
     var correctnumber: Int!
+    var imagearray = [String]()
     @IBOutlet var resultlabel: UILabel!
     @IBOutlet weak var resultimage: UIImageView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         resultlabel.text = String(correctnumber)
-        
-        /*resultimage.image = UIImage(named: "")*/
-
+        imagearray = ["result0.png","result60.png","result120.png","result180.png","result240ex.png","result300ex.png","result360ex.png","result420.png","result480.png","result540.png","result600.png"]
+        resultimage.image = UIImage(named: imagearray[correctnumber])
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }

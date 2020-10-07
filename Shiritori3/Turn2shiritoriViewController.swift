@@ -11,44 +11,32 @@ import UIKit
 class Turn2shiritoriViewController: UIViewController {
     var turnnumber: Int!
     var shiritorienterword = ""
+    var correctnumber: Int!
     @IBOutlet var label1: UILabel!
-    @IBOutlet var label2: UILabel!
-    @IBOutlet var label3: UILabel!
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if turnnumber == 2{
-            label2.isHidden = true
-            label3.isHidden = true
+            label1.text = String("2Pと1Pの順番を入れ替えます\n\n\n2Pの人は\n\n1Pの人に見られないように\n\n表示される単語から\n\nしりとりをしたら\n\n完了ボタンを押してください")
         }else if turnnumber %  2 == 1{
-            label1.isHidden = true
-            label3.isHidden = true
+            label1.text = String("1Pがしりとりをする\n\nターンです")
         }else{
-            label1.isHidden = true
-            label2.isHidden = true
+            label1.text = String("2Pがしりとりをする\n\nターンです")
         }
         
         
-
-        // Do any additional setup after loading the view.
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "toSecond" {
-        let shiritoriViewContoroller = segue.destination as! ShiritoriViewController
-        shiritoriViewContoroller.turnnumber = turnnumber
-        shiritoriViewContoroller.lastword = shiritorienterword
+        if segue.identifier == "toSecond" {
+            let shiritoriViewContoroller = segue.destination as! ShiritoriViewController
+            shiritoriViewContoroller.turnnumber = turnnumber
+            shiritoriViewContoroller.lastword = shiritorienterword
+            shiritoriViewContoroller.correctnumber = correctnumber
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
 }

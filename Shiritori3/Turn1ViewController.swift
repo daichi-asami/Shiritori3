@@ -12,52 +12,33 @@ class Turn1ViewController: UIViewController {
     var turnnumber: Int!
     var shiritorienterword = ""
     var lastword = ""
+    var correctnumber: Int!
     @IBOutlet var label1: UILabel!
-    @IBOutlet var label2: UILabel!
-    @IBOutlet var label3: UILabel!
-    @IBOutlet var label4: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if turnnumber == 1{
-            label2.isHidden = true
-            label3.isHidden = true
-            label4.isHidden = true
+            label1.text = String("スマホを2Pの人に\n\n渡してください\n\n\n2Pの人は1Pの人が打った\n\n単語を予測して\n\nその単語に続いて\n\nしりとりしてください")
         }else if turnnumber == 2{
-            label1.isHidden = true
-            label3.isHidden = true
-            label4.isHidden = true
+            label1.text = String("スマホを1Pの人に\n\n渡してください\n\n\n1Pの人は2Pの人が打った\n\n単語を予測して\n\nその単語に続いて\n\nしりとりしてください")
         }else if turnnumber % 2 == 1{
-            label1.isHidden = true
-            label2.isHidden = true
-            label4.isHidden = true
+            label1.text = String("2Pが予測をする\n\nターンです")
         }else{
-            label1.isHidden = true
-            label2.isHidden = true
-            label3.isHidden = true
+            label1.text = String("1Pが予測をする\n\nターンです")
         }
-
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "toSecond" {
-        let yosokuViewContoroller = segue.destination as! YosokuViewController
-        yosokuViewContoroller.turnnumber = turnnumber
-        yosokuViewContoroller.shiritorienterword = shiritorienterword
-        yosokuViewContoroller.lastword = lastword
+        if segue.identifier == "toSecond" {
+            let yosokuViewContoroller = segue.destination as! YosokuViewController
+            yosokuViewContoroller.turnnumber = turnnumber
+            yosokuViewContoroller.shiritorienterword = shiritorienterword
+            yosokuViewContoroller.lastword = lastword
+            yosokuViewContoroller.correctnumber = correctnumber
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }
